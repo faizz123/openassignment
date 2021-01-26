@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+</head>
+
+<body>
+<div id="layout">
+    <div id="block1">
+      <div class="logo" >    
+        <img src="https://nandhuopen.github.io/assignment-example-1/assets/img/logo.png" >
+    </div>
+    <div class="logo2"> 
+      <img  src="https://nandhuopen.github.io/assignment-example-1/assets/img/blob-small.svg">   
+    </div>
+    <div class="logo3"> 
+      <img  src="/assets/We make it Super Sim.png">   
+          <div class="line"></div>
+          <img class="logo4"src="/assets/collect_img-video.png"> 
+  
+    </div>
+    <div class="logo5"> 
+      <img  src="/assets/accounting_dots.png">   
+    </div>
+    </div>
+
+    <!-- this image has to come in next column ,refer design -->
+    <div id="#block2"> 
+      <div class="circle"> 
+       <nav>
+            <ul class="main-nav">
+                <li>Products</li>
+                <li>Solution</li>
+                <li>Pricing</li>
+                <li style="font-size:20px;"><button class="btn-ghost btn-lg">Login</button></li>
+                <li style="font-size:20px;"> <button class="btn-full btn-lg">Get Started</button></li>
+                </ul>
+            
+            
+        </nav>
+      
+        
+  <div class="col span-1-of-2">
+         <div class=" cards">
+            <div class="card1" style="width:375px;height:550;">
+              <h4 class="text-center"style="font: normal normal normal 25px/34px Open Sans;">Eligibility Calculator</h4>
+                <div class="calculator" >
+                    <form>
+                    <div class="row-form-group">
+                    <label>Monthly Income</label><br>
+                    <h3>₹ {{open.monthlyIncome}}</h3>
+                    <input type="range" class="range-slider"  name="monthlyIncome"  [(ngModel)]="open.monthlyIncome"min="100000"max="300000"><br>
+                   <div style="display: inline-flex;"> <h6 class="text-left">100000</h6>&nbsp;&nbsp;<h6 style="float:right;padding-left:220px">300000</h6></div>
+                  </div>
+                    <br> 
+                    <div class="form-group">
+                    <label>Monthly Expense</label><br>
+                     <h3>₹ {{open.monthlyExpense}}</h3>
+                    <input type="range" class="range-slider" name="monthlyExpense"[(ngModel)]="open.monthlyExpense"min="10000"max="100000"><br>
+                  </div>
+                    <br> 
+                    <div class="form-group">
+                      <label>Repayment Teure</label><br>
+                     <select [(ngModel)]="open.RepaymentTeure"class="form-control" name="repayment"
+                     (change)="calculateSgpa(course);calculateAndDisplayCalculatedCgpa();">
+                     <option  value="3" >3 Months</option>
+                     <option  value="6" >6 Months</option>
+                     <option  value="9" >9Months</option>
+                     <option  value="12" >12Months</option>
+                   </select> 
+                  </div>
+                    <br>
+                    <div class="form-group" style="display: inline-flex;">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Do you have any existing loans?</label>&nbsp;&nbsp;
+
+                    <div class="form-check form-switch"style="float:right;padding-left:60px">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"name="existingloan"[(ngModel)]="open.existingLoan">  <br>
+                    </div>
+                  </div><br>
+               
+               <br>
+                  <div class="form-group" *ngIf="open.existingLoan">
+                     <label>EMI of existing loan (optional)</label>
+                     <input  type="text" name="emi"[(ngModel)]="open.emi" placeholder="₹">  <br>
+                    </div>
+                  </form>
+                </div>
+                <div class="dot5"> 
+                  <img  src="/assets/accounting_dots.png">   
+                </div>
+             
+             
+             </div>
+             <div class="card2"style="width:275px;height:370px;">
+             
+             <p class="text-white"style="font-family:Montserrat;margin-top:60px;font-size:20px;">Loan Amount</p>
+                 
+            <p class="text-white"style="font-family:Montserrat;font-size:25px;font-weight:700;">₹ {{open.monthlyIncome}}</p>
+                 <p style="font-family:Montserrat;font-size:20px;">Youe EMI will be</p>
+                 <p style="font-family:Montserrat;font-size:25px;font-weight:700;padding-bottom:10px;">₹ {{open.emi}}</p>
+                 <div style="font-family:Montserrat;font-size:20px;padding-left:70px;margin-bottom:80px;">
+                 <button class="btn-money">Get Money</button>
+                 </div>
+             </div>
+            
+            </div>
+         </div>
+        
+        </div>
+      </div>
+</div>
+<section class="page2">
+  <img  src="assets/sol_wave_bg.png" style="width:2400px;">  
+   <div class= "row">
+<div class ="col span-1-of-2">
+<div class = "cards"> 
+  <div class = "footercards1">
+
+                  <div class = footercards3>
+                      <img src="/assets/logos/logo4.png"  class="footerlogo4">
+                      <p class="content1"><b>Quick cash disbursement</b></p>
+                      <p class="content1">Get terms loans that your business <br/>needs within 72 hrs</p>
+                  </div>
+                     <div class = footercards3>
+                      <img src="/assets/logos/logo7.png" class="footerlogo4">
+                      <p  class="content1"><b>Low-interest rate</b></p>
+                      <p  class="content1">Achieve your financial goals with an <br/>amazing interest rate starting at <br/>13% per annum</p>
+                        </div>
+                         <div class = footercards3>
+                      <img src="/assets/logos/logo6.png" class="footerlogo4">
+                      <p  class="content1"><b>Zero Paperwork</b></p>
+                      <p  class="content1">Get started instantly by submitting <br />only your basic details & bank <br />statements</p>
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div class="footercards">
+                        <div class="footercards2">
+                         <div class = "footercards3 footercards4">
+                      <img src="/assets/logos/logo5.png"class="footerlogo4" >
+                      <p class="content1"><b>Ace your business finances</b></p>
+                      <p class="content1" >Manage banking, accounting & <br/>everything in between, on one <br/>platform
+                        </div>
+                         <div class = "footercards3">
+                      <img src="/assets/logos/logo8.png" class="footerlogo4">
+                      <p class="content1"><b>Loans to fight COVID-19</b></p>
+                      <p class="content1">Zero EMI for first 3 months on <br/>Back-to-<br />Business loans of upto 1<br/>lakh</p>
+                        </div>
+                    
+                    
+                    </div>
+                    </div>
+ </div>
+ </div>
+              <div class ="col span-1-of-2">
+              
+              <div class= "footerlogo5">
+                  <img style="padding-left:30%;"src="/assets/logos/Boost%20your%20business.svg">
+                  <img style="padding-left:30%;"src="/assets/Line 3.png">
+                  </div>
+                <p class="content2">Get your hands on a term loan that’s crafted for your <br>business</p> <br><button style="margin-left:43%;"class="btn-ghost btn-3">Get an Opening Account</button>
+              </div>
+    </div>
+  </section>
+
+  
+</body>
+</html>
